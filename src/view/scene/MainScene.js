@@ -31,8 +31,8 @@ var MainScene = cc.Scene.extend({
         this.layers.santaLayer.addSanta();
     },
 
-    moveSanta: function(){
-        var animationObject = this.layers.santaLayer.getMoveSantaAnimationWithTarget();
-        animationObject.target.runAction(animationObject.action);
+    moveSanta: function(id){
+        var animationObject = this.layers.santaLayer.getMoveSantaAnimationWithTarget(id);
+            animationObject.target.runAction(animationObject.action);
     }
 });

@@ -20,6 +20,8 @@ var GameController = cc.Class.extend({
 
     viewDidFinishLoading: function(){
         this.view.addSanta();
-        this.view.moveSanta();
+        this.view.moveSanta('santa');
+        this.view.moveSanta('santa2');
+        this.view.moveSanta('santa3');
     }
 });

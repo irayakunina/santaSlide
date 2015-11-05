@@ -33,7 +33,7 @@ var GameView = cc.Class.extend({
         this.scene.addSanta();
     },
 
-    moveSanta: function(){
-        this.scene.moveSanta();
+    moveSanta: function(id){
+        this.scene.moveSanta(id);
     }
 });
