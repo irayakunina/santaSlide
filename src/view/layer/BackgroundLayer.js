@@ -31,7 +31,9 @@ var BackgroundLayer = cc.Layer.extend({
             x: size.width / 2,
             y: size.height / 2,
             anchorX: 0,
-            scale: 2
+            //scale: 2,
+            width: size.width,
+            height: size.height
         });
         this.addChild(this.sprite, 0);
 

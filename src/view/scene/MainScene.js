@@ -6,5 +6,8 @@ var MainScene = cc.Scene.extend({
         this._super();
         var layer = new BackgroundLayer();
         this.addChild(layer);
+
+        var layerField = new FieldLayer();
+        this.addChild(layerField);
     }
 });
