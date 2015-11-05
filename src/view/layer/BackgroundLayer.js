@@ -3,7 +3,7 @@
  */
 var BackgroundLayer = cc.Layer.extend({
     sprite:null,
-    ctor:function () {
+    ctor:function (scene) {
         //////////////////////////////
         // 1. super init first
         this._super();

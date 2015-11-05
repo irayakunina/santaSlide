@@ -24,7 +24,16 @@ var GameView = cc.Class.extend({
     },
 
     sceneInitializationComplete: function(){
+        if(this.controller && this.controller.viewDidFinishLoading) {
+            this.controller.viewDidFinishLoading();
+        }
+    },
 
+    addSanta: function(){
+        this.scene.addSanta();
+    },
+
+    moveSanta: function(){
+        this.scene.moveSanta();
     }
-
 });

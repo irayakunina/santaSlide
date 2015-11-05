@@ -13,9 +13,12 @@
     "jsList" : [
         "src/resource.js",
         "src/controller/AppController.js",
+        "src/controller/GameController.js",
+        "src/object/Santa.js",
         "src/view/GameView.js",
         "src/view/scene/MainScene.js",
         "src/view/layer/BackgroundLayer.js",
-        "src/view/layer/FieldLayer.js"
+        "src/view/layer/FieldLayer.js",
+        "src/view/layer/SantaLayer.js"
     ]
 }

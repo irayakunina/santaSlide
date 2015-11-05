@@ -2,12 +2,37 @@
  * Created by bz on 31/10/2015.
  */
 var MainScene = cc.Scene.extend({
+    layers: {},
+    size: {},
+    view: null,
+
+    ctor: function(view){
+        this._super();
+
+        this.view = view;
+    },
+
     onEnter:function () {
         this._super();
-        var layer = new BackgroundLayer();
-        this.addChild(layer);
+        this.size = cc.winSize;
+        this.layers = {};
+        this.layers.backgroundLayer = new BackgroundLayer(this);
+        this.layers.fieldLayer = new FieldLayer(this);
+        this.layers.santaLayer = new SantaLayer(this);
 
-        var layerField = new FieldLayer();
-        this.addChild(layerField);
+        this.addChild(this.layers.backgroundLayer);
+        this.addChild(this.layers.fieldLayer);
+        this.addChild(this.layers.santaLayer);
+
+        this.view.sceneInitializationComplete();
+    },
+
+    addSanta: function(){
+        this.layers.santaLayer.addSanta();
+    },
+
+    moveSanta: function(){
+        var animationObject = this.layers.santaLayer.getMoveSantaAnimationWithTarget();
+        animationObject.target.runAction(animationObject.action);
     }
 });
